@@ -11,9 +11,7 @@ A modern, scalable task management application with JWT authentication, built wi
 - Backend: Render
 - Database: MongoDB Atlas
 
-**Demo Login Credentials:**
-- Email: `demo@example.com`
-- Password: `demo123`
+
 
 > Note: You can also create your own account using the signup page.
 
