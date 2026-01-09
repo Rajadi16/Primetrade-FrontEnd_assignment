@@ -2,6 +2,21 @@
 
 A modern, scalable task management application with JWT authentication, built with Next.js and Express.
 
+## 🌐 Live Demo
+
+**Live Site:** [https://primetrade-front-end-assignment-fro-psi.vercel.app/](https://primetrade-front-end-assignment-fro-psi.vercel.app/)
+
+**Hosted On:**
+- Frontend: Vercel
+- Backend: Render
+- Database: MongoDB Atlas
+
+**Demo Login Credentials:**
+- Email: `demo@example.com`
+- Password: `demo123`
+
+> Note: You can also create your own account using the signup page.
+
 ## 🚀 Features
 
 - **Secure Authentication**: JWT-based authentication with bcrypt password hashing
@@ -28,67 +43,57 @@ A modern, scalable task management application with JWT authentication, built wi
 - **Password Hashing**: bcryptjs
 - **Validation**: express-validator
 
-## 📋 Prerequisites
+## 🔧 Local Development Setup
 
+### Prerequisites
 - Node.js (v18 or higher)
 - MongoDB (local or MongoDB Atlas)
 - npm or yarn
 
-## 🔧 Installation & Setup
+### Quick Start
 
-### 1. Clone the repository
-
+1. **Clone the repository**
 ```bash
 git clone <repository-url>
 cd Primetrade-FrontEnd_assignment
 ```
 
-### 2. Backend Setup
-
+2. **Backend Setup**
 ```bash
 cd backend
 npm install
 ```
 
-Create a `.env` file in the backend directory:
-
+Create `.env` file in backend directory:
 ```env
 PORT=5000
 MONGODB_URI=mongodb://localhost:27017/taskmanager
-JWT_SECRET=your_super_secret_jwt_key_change_this_in_production
+JWT_SECRET=your_super_secret_jwt_key
 NODE_ENV=development
 ```
 
-Start the backend server:
-
+Start backend:
 ```bash
 npm start
-# or for development with auto-reload
-npm run dev
 ```
 
-The backend will run on `http://localhost:5000`
-
-### 3. Frontend Setup
-
+3. **Frontend Setup**
 ```bash
 cd frontend
 npm install
 ```
 
-Create a `.env.local` file in the frontend directory:
-
+Create `.env.local` file in frontend directory:
 ```env
 NEXT_PUBLIC_API_URL=http://localhost:5000/api
 ```
 
-Start the frontend development server:
-
+Start frontend:
 ```bash
 npm run dev
 ```
 
-The frontend will run on `http://localhost:3000`
+Visit `http://localhost:3000` to see the app!
 
 ## 📚 API Documentation
 
@@ -226,37 +231,25 @@ Primetrade-FrontEnd_assignment/
 └── README.md
 ```
 
-## 🚀 Scaling for Production
-
-See [SCALING_NOTES.md](./SCALING_NOTES.md) for detailed information on scaling this application for production use.
-
-### Quick Scaling Tips:
-
-1. **Database**: Use MongoDB Atlas with replica sets
-2. **Caching**: Implement Redis for session management
-3. **Load Balancing**: Use Nginx or cloud load balancers
-4. **CDN**: Serve static assets via CDN
-5. **Environment Variables**: Use proper secret management
-6. **Monitoring**: Implement logging and monitoring tools
-7. **Containerization**: Use Docker for consistent deployments
-
 ## 🧪 Testing
 
-### Backend Testing
-```bash
-cd backend
-# Test health endpoint
-curl http://localhost:5000/api/health
-```
-
-### Frontend Testing
-Open `http://localhost:3000` in your browser and test:
-1. Sign up with a new account
-2. Login with credentials
+### Test the Live Application
+Visit the [live demo](https://primetrade-front-end-assignment-fro-psi.vercel.app/) and:
+1. Sign up with a new account or use demo credentials
+2. Login and access the dashboard
 3. Create, update, and delete tasks
 4. Test search and filter functionality
 5. Update profile information
 6. Logout and verify redirect
+
+### Test Local Development
+```bash
+# Backend health check
+curl http://localhost:5000/api/health
+
+# Frontend
+Open http://localhost:3000 in your browser
+```
 
 ## 📝 License
 
