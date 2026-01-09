@@ -48,6 +48,32 @@ router.post(
             });
 
             if (user) {
+                // Create sample tasks for new user
+                const Task = require('../models/Task');
+                await Task.create([
+                    {
+                        user: user._id,
+                        title: 'Welcome to TaskManager!',
+                        description: 'This is a sample task. You can edit or delete it.',
+                        status: 'pending',
+                        priority: 'low'
+                    },
+                    {
+                        user: user._id,
+                        title: 'Complete your profile',
+                        description: 'Update your profile information in the Profile section.',
+                        status: 'in-progress',
+                        priority: 'medium'
+                    },
+                    {
+                        user: user._id,
+                        title: 'Create your first task',
+                        description: 'Click the "+ New Task" button to create your own task.',
+                        status: 'pending',
+                        priority: 'high'
+                    }
+                ]);
+
                 res.status(201).json({
                     _id: user._id,
                     name: user.name,
